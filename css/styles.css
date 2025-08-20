@@ -149,9 +149,9 @@ h1,
   border: none;
   border-radius: 16px;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
-  padding: 28px 20px;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   transition: box-shadow 0.28s cubic-bezier(0.4, 1.25, 0.3, 1.1),
     transform 0.18s cubic-bezier(0.5, 0, 0.5, 1), border 0.26s;
   border-top: 4px solid transparent; /* For accent animate */

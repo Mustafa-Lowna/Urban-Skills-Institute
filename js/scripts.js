@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', event => {
         }
 
     };
+    
 
     // Shrink the navbar 
     navbarShrink();
@@ -55,5 +56,7 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
+    
 
 });
+

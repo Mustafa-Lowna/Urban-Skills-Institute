@@ -11314,13 +11314,24 @@ header.masthead {
   background-attachment: scroll;
   background-size: cover;
 }
+ /* Mobile Ke Liye Size Home Section Ke liye */
+ 
+@media (max-width: 991.98px) {
+  header.masthead {
+    height: 95vh; /* height bada kiya to 70% viewport height */
+    padding-top: 10rem; /* zarurat ho to padding adjust karein */
+    padding-bottom: 3rem;
+    background-attachment: scroll; /* optional: mobile me fixed attachment kana kare */
+  }
+}
+
 header.masthead h1,
 header.masthead .h1 {
   font-size: 2.25rem;
 }
 @media (min-width: 992px) {
   header.masthead {
-    height: 110vh;
+    height: 100vh;
     min-height: 40rem;
     padding-top: 4.5rem;
     padding-bottom: 0;

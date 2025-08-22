@@ -11320,7 +11320,7 @@ header.masthead {
   header.masthead {
     height: 95vh; /* height bada kiya to 70% viewport height */
     padding-top: 10rem; /* zarurat ho to padding adjust karein */
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     background-attachment: scroll; /* optional: mobile me fixed attachment kana kare */
   }
 }

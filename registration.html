@@ -12,7 +12,7 @@
 
     <style>
       body {
-        background-color: #f8f9fa; /* Light gray background */
+        background-color: #f8f9fa;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         min-height: 100vh;
         display: flex;
@@ -20,20 +20,18 @@
         justify-content: center;
         padding: 2rem;
         color: #333;
+        margin: 0;
       }
 
       .registration-card {
-        background: white;
-        border-radius: 1rem;
+        width: 420px;
+        max-width: 95vw;
         padding: 2.5rem 3rem;
-        max-width: 480px;
-        width: 100%;
+        background: white;
+        border-radius: 1.5rem;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.3s ease-in-out;
-      }
-
-      .registration-card:hover {
-        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        margin: 2rem auto;
+        box-sizing: border-box;
       }
 
       h2 {
@@ -41,6 +39,7 @@
         color: #f4623a;
         text-align: center;
         margin-bottom: 2rem;
+        font-size: 1.7rem;
       }
 
       .form-label {
@@ -48,31 +47,36 @@
         color: #555;
       }
 
-      .form-control {
-        border-radius: 0.5rem;
+      .form-control,
+      .form-select {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+        border-radius: 0.4rem;
+        margin-bottom: 1rem;
         border: 1.5px solid #ddd;
-        padding: 0.75rem 1rem;
         transition: border-color 0.3s ease;
       }
 
-      .form-control:focus {
+      .form-control:focus,
+      .form-select:focus {
         border-color: #f4623a;
         box-shadow: 0 0 8px rgba(244, 98, 58, 0.4);
         outline: none;
       }
 
       .btn-register {
-        background-color: #f4623a;
-        border: none;
-        padding: 0.85rem;
+        padding: 0.7rem;
+        font-size: 1rem;
         border-radius: 50px;
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: white;
         width: 100%;
         margin-top: 1.5rem;
         box-shadow: 0 8px 15px rgba(244, 98, 58, 0.4);
+        background-color: #f4623a;
+        border: none;
+        color: white;
+        font-weight: 700;
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
       }
 
       .btn-register:hover {
@@ -84,31 +88,29 @@
         font-size: 0.9rem;
         color: #d93025;
       }
-      /* MOBILE aur TABLET PAR form ko khula, wide rkhe, patla mat hone de */
-      @media (max-width: 991.98px) {
+
+      @media (max-width: 575.98px) {
         .registration-card {
-          background: white;
-          border-radius: 1rem;
-          padding: 1.5rem 2rem;
-          max-width: 480px;
-          width: 100%;
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-          transition: box-shadow 0.3s ease-in-out;
+          width: 90vw;
+          padding: 2rem 1.5rem;
         }
-        .form-control,
-        .form-select {
-          font-size: 1rem;
-          padding: 0.75rem 1rem;
-          border-radius: 0.7rem;
-        }
-        .btn-register {
-          font-size: 1.1rem;
-          padding: 1rem;
-          border-radius: 999px;
-          margin-top: 1.2rem;
-        }
+
         h2 {
           font-size: 1.4rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .form-control,
+        .form-select {
+          font-size: 0.85rem;
+          padding: 0.35rem 0.7rem;
+          margin-bottom: 0.9rem;
+        }
+
+        .btn-register {
+          padding: 0.6rem;
+          font-size: 0.95rem;
+          margin-top: 1.2rem;
         }
       }
     </style>
@@ -122,8 +124,8 @@
           <label for="fullName" class="form-label">Full Name *</label>
           <input
             type="text"
-            class="form-control"
             id="fullName"
+            class="form-control"
             placeholder="Enter your full name"
             required
           />
@@ -134,8 +136,8 @@
           <label for="mobile" class="form-label">Mobile Number *</label>
           <input
             type="tel"
-            class="form-control"
             id="mobile"
+            class="form-control"
             placeholder="Enter your mobile number"
             pattern="[0-9]{10}"
             required
@@ -149,8 +151,8 @@
           <label for="email" class="form-label">Email Address *</label>
           <input
             type="email"
-            class="form-control"
             id="email"
+            class="form-control"
             placeholder="Enter your email"
             required
           />
@@ -161,7 +163,7 @@
 
         <div class="mb-3">
           <label for="courseSelect" class="form-label">Select Course *</label>
-          <select class="form-select" id="courseSelect" required>
+          <select id="courseSelect" class="form-select" required>
             <option value="" selected disabled>Choose your course</option>
             <option value="web-design">Web Design</option>
             <option value="graphic-design">Graphic Design</option>

@@ -12,7 +12,7 @@
 
     <style>
       body {
-        position: relative;
+        background-color: #f8f9fa;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         min-height: 100vh;
         display: flex;
@@ -21,22 +21,6 @@
         padding: 2rem;
         color: #333;
         margin: 0;
-        overflow: hidden; /* To avoid scroll caused by blur */
-      }
-
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url(assets/Urban\ Skills\ Institute\ Opa\ Less.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: blur(8px); /* Adjust blur strength */
-        z-index: -1;
       }
 
       .registration-card {

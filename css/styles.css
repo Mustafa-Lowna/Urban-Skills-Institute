@@ -11319,7 +11319,7 @@ header.masthead {
 @media (max-width: 991.98px) {
   header.masthead {
     height: 95vh; /* height bada kiya to 70% viewport height */
-    padding-top: 12rem; /* zarurat ho to padding adjust karein */
+    padding-top: 10rem; /* zarurat ho to padding adjust karein */
     padding-bottom: 3rem;
     background-attachment: scroll; /* optional: mobile me fixed attachment kana kare */
   }

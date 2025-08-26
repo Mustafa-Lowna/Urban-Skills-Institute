@@ -11358,7 +11358,7 @@ header.masthead::before {
   background-attachment: scroll;
   background-size: cover;
   opacity: 0;
-  animation: fadeInBg 2s ease forwards;
+  animation: fadeInBg 1.5s ease forwards;
   z-index: -1;
 }
 

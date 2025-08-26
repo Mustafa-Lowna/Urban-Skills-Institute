@@ -11335,19 +11335,40 @@ hr.divider-light {
 }
 
 header.masthead {
+  position: relative; /* pseudo element ke liye container */
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
+  background: none; /* remove direct bg image */
+  overflow: hidden;
+}
+
+/* Pseudo element jo background image rakhe */
+header.masthead::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
       to bottom,
       rgba(92, 77, 66, 0.8) 0%,
       rgba(92, 77, 66, 0.8) 100%
     ),
-    url("../assets/img/computer-bg1.jpg ");
+    url("../assets/img/computer-bg1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  opacity: 0;
+  animation: fadeInBg 2s ease forwards;
+  z-index: -1;
 }
+
+/* Fade in keyframes */
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
+}
+
 /* Mobile Ke Liye Size Home Section Ke liye */
 
 @media (max-width: 991.98px) {
@@ -11382,6 +11403,22 @@ header.masthead .h1 {
   header.masthead h1,
   header.masthead .h1 {
     font-size: 3.5rem;
+  }
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(70px);
+  animation: slideUp 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

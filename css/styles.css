@@ -11352,7 +11352,7 @@ header.masthead::before {
       rgba(92, 77, 66, 0.8) 0%,
       rgba(92, 77, 66, 0.8) 100%
     ),
-    url("../assets/img/computer-bg1.jpg");
+    url("../assets/img/computer\ view.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
